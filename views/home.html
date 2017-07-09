@@ -1,0 +1,37 @@
+
+
+<!-- Wide card with share menu button -->
+<div class="mdl-grid">
+ <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"></div>
+ <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
+<div ng-repeat="user in data | orderBy:'name'">
+<div class="demo-card-wide mdl-card mdl-shadow--4dp">
+	<h3 style="text-align:center; color: black;"> Visiting Card!! </h3>
+	<hr class="style-two">
+    <span class="mdl-list__item-primary-content name">
+    <i class="material-icons mdl-list__item-icon">person</i>
+    {{user.name | uppercase}}
+	</span>
+	<br>
+	<span class="ph"><i class="material-icons">call</i> {{user.phno}}</span>
+	<br>
+	<span class="em"><i class="material-icons">email</i> {{user.email}}</span>
+	<br>
+	<span class="address"><i class="material-icons">location_on</i> {{user.address}}</span>
+ 
+  <div class="mdl-card__actions mdl-card--border">
+     <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--colored" ng-click="view(user._id)">
+      <i class="material-icons">visibility</i>
+    </button>
+  </div>
+  <div class="mdl-card__menu">
+    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--colored" ng-click="del(user)">
+     <i class="material-icons">clear</i>
+    </button>
+  </div>
+</div>
+<hr>
+<br>
+</div>
+</div>
+</div>

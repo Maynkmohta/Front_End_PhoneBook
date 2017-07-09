@@ -1,0 +1,52 @@
+<!-- Wide card with share menu button -->
+<div class="mdl-grid">
+ <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"></div>
+ <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
+<div class="demo-card-wide mdl-card mdl-shadow--4dp">
+	<h3 style="text-align:center; color: black;"> View Card </h3>
+	<hr class="style-two">
+    <span class="mdl-list__item-primary-content name">
+    <i class="material-icons mdl-list__item-icon">person</i>
+    {{data.name}}
+	</span>
+	<br>
+	<span class="ph"><i class="material-icons">call</i>{{data.phno}}</span>
+	<br>
+	 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" name="txtmsg" id="txtmsg" ng-model="txtmsg">
+    <label class="mdl-textfield__label" for="txtmsg">Your Message here..</label>
+	</div>
+	<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--colored" ng-click="sendmsg()">
+	 <i class="material-icons">send</i> 
+    </button>
+	<br>
+	<span class="em"><i class="material-icons">email</i> {{data.email}}</span>
+	<br>
+	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="email" name="email">
+    <label class="mdl-textfield__label" for="email">Your Email here..</label>
+	</div>
+	<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--colored" ng-click="sendemail()">
+    <i class="material-icons">send</i> 
+    </button>
+	<br>
+	<span class="address"><i class="material-icons">location_on</i> {{data.address}} </span>
+	<figure>
+	<img src="https://maps.googleapis.com/maps/api/staticmap?center={{data.address}}&zoom=16&size=400x200&maptype=roadtype&markers=color:red%7C{{data.address}}&key=AIzaSyBIJaUnESSlhHoPTOGCv0LNf0H-Zv_pEwE">
+	<figcaption style="color:black;"> For your ease thats the image of my home. </figcaption>
+	</figure>	
+ 
+  <div class="mdl-card__actions mdl-card--border">
+     
+  </div>
+  <div class="mdl-card__menu">
+    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--colored" ng-click="del(user)">
+     <i class="material-icons">clear</i>
+    </button>
+  </div>
+
+<hr>
+<br>
+</div>
+</div>
+</div>
